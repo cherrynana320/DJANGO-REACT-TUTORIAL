@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 function ProtectedRoute({ children }) {
   // 인증 상태 관리
-  const [isAuthoruized, setIsAuthorized] = useState(null);
+  const [isAuthorized, setIsAuthorized] = useState(null);
 
   // useEffect : 컴포넌트가 렌더링될 때 초기화 작업을 수행하고, 초기 상태를 설정
   useEffect(() => {
@@ -57,12 +57,12 @@ function ProtectedRoute({ children }) {
   };
 
   // 인증 상태가 아직 확인되지 않은 경우 로딩 상태를 표시
-  if (isAuthoruized === null) {
+  if (isAuthorized === null) {
     return <div>Loading...</div>;
   }
 
   // 인증된 경우 자식 컴포넌트를 렌더링하고, 그렇지 않은 경우 로그인 페이지로 리디렉션
-  return isAuthoruized ? children : <Navigate to="/login" />;
+  return isAuthorized ? children : <Navigate to="/login" />;
 }
 
 export default ProtectedRoute;
