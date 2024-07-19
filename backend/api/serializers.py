@@ -30,5 +30,7 @@ class NoteSerializer(serializers.ModelSerializer):
     class Meta: 
         model = Note
         fields = ["id", "title", "content", "created_at", "author"]
+
+        # 클라이언트가 POST 요청을 통해 author 필드의 값을 직접 설정할 수 없도록 합
         extra_kwargs = {"author": {"read_only": True}}
         
