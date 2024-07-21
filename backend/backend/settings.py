@@ -96,6 +96,8 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
+# 여기서 dotenv를 사용해서 사용할 DB설정
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
