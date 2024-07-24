@@ -1,11 +1,15 @@
 import axios from 'axios';
 import { ACCESS_TOKEN } from './constants';
 
+// 배포할 때 프론트엔드를 백엔드와 연결
+const apiUrl = '/choreo-apis/djangoreacttutorial/backend/v1';
+
 // Axios 인스턴스 생성
 const api = axios.create({
   // 환경 변수(import.meta.env.VITE_API_URL)에서 API의 기본 URL을 가져옴
   //  Vite : 프론트엔드 빌드 도구
-  baseURL: import.meta.env.VITE_API_URL,
+  // baseURL: import.meta.env.VITE_API_URL
+  baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : apiUrl,
 });
 
 // 요청 인터셉터 추가
