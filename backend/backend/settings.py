@@ -100,7 +100,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # 여기서 dotenv를 사용해서 사용할 DB설정
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': "django.db.backends.postgresql",
         'NAME': os.getenv("DB_Name"),
         'USER': os.getenv("DB_USER"),
         "PASSWORD" : os.getenv("DB_PASSWORD"),
