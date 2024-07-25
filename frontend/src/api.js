@@ -2,7 +2,7 @@ import axios from 'axios';
 import { ACCESS_TOKEN } from './constants';
 
 // 배포할 때 프론트엔드를 백엔드와 연결
-const apiUrl = '/choreo-apis/djangoreacttutorial/backend/v1.0';
+const apiUrl = '/choreo-apis/djangoreacttutorial/backend/v1';
 
 // Axios 인스턴스 생성
 const api = axios.create({
